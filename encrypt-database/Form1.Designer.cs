@@ -40,7 +40,8 @@
             this.txtAccNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(-2, 348);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1036, 304);
+            this.dataGridView1.Size = new System.Drawing.Size(1273, 304);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -140,7 +141,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(517, 124);
+            this.btnSave.Location = new System.Drawing.Point(418, 124);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(149, 41);
             this.btnSave.TabIndex = 11;
@@ -148,22 +149,32 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(751, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.button1.Location = new System.Drawing.Point(585, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 41);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Decrypt Data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(836, 11);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(435, 329);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1033, 652);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1271, 652);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtAccNo);
             this.Controls.Add(this.label5);
@@ -201,7 +212,8 @@
         private System.Windows.Forms.TextBox txtAccNo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

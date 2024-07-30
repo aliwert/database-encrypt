@@ -65,5 +65,19 @@ namespace encrypt_database
         {
             list();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nameDecrypt = txtName.Text;
+            byte[] nameDecryptArr = Convert.FromBase64String(nameDecrypt);
+            string nameData=ASCIIEncoding.ASCII.GetString(nameDecryptArr);
+            richTextBox1.Text = nameData;
+
+            string nameDecrypt = txtName.Text;
+            byte[] nameDecryptArr = Convert.FromBase64String(nameDecrypt);
+            string nameData = ASCIIEncoding.ASCII.GetString(nameDecryptArr);
+            richTextBox1.Text = nameData;
+
+        }
     }
 }
