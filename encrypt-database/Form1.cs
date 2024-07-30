@@ -30,15 +30,17 @@ namespace encrypt_database
             byte[] surnameArr = ASCIIEncoding.ASCII.GetBytes(surname);
             string encryptSurname = Convert.ToBase64String(surnameArr);
 
-            string mail = txtSurname.Text;
+            string mail = txtMail.Text;
             byte[] mailArr = ASCIIEncoding.ASCII.GetBytes(mail);
             string encryptMail = Convert.ToBase64String(mailArr);
 
-            string password = txtSurname.Text;
+            string password = txtPassword.Text;
             byte[] passwordArr = ASCIIEncoding.ASCII.GetBytes(password);
             string encryptPassword = Convert.ToBase64String(passwordArr);
 
-
+            string accountNo = txtAccNo.Text;
+            byte[] accountNoArr = ASCIIEncoding.ASCII.GetBytes(accountNo);
+            string encryptAccountNo = Convert.ToBase64String(accountNoArr);
         }
     }
 }
