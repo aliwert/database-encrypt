@@ -71,13 +71,14 @@ namespace encrypt_database
             string nameDecrypt = txtName.Text;
             byte[] nameDecryptArr = Convert.FromBase64String(nameDecrypt);
             string nameData=ASCIIEncoding.ASCII.GetString(nameDecryptArr);
-            richTextBox1.Text = nameData;
+            
 
-            string nameDecrypt = txtName.Text;
-            byte[] nameDecryptArr = Convert.FromBase64String(nameDecrypt);
-            string nameData = ASCIIEncoding.ASCII.GetString(nameDecryptArr);
-            richTextBox1.Text = nameData;
-
+            string surnameDecrypt = txtSurname.Text;
+            byte[] surnameDecryptArr = Convert.FromBase64String(surnameDecrypt);
+            string surnameData = ASCIIEncoding.ASCII.GetString(surnameDecryptArr);
+            
+            string combinedData = $"Name: {nameData}\nSurname: {surnameData}";
+            richTextBox1.Text = combinedData;
         }
     }
 }
