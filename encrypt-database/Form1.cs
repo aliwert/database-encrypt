@@ -76,9 +76,27 @@ namespace encrypt_database
             string surnameDecrypt = txtSurname.Text;
             byte[] surnameDecryptArr = Convert.FromBase64String(surnameDecrypt);
             string surnameData = ASCIIEncoding.ASCII.GetString(surnameDecryptArr);
-            
-            string combinedData = $"Name: {nameData}\nSurname: {surnameData}";
+
+            string mailDecrypt = txtMail.Text;
+            byte[] mailDecryptArr = Convert.FromBase64String(mailDecrypt);
+            string mailData = ASCIIEncoding.ASCII.GetString(mailDecryptArr);
+
+            string passwordDecrypt = txtPassword.Text;
+            byte[] passwordDecryptArr = Convert.FromBase64String(passwordDecrypt);
+            string passwordData = ASCIIEncoding.ASCII.GetString(passwordDecryptArr);
+
+            string accountNoDecrypt = txtAccNo.Text;
+            byte[] accountNoDecryptArr = Convert.FromBase64String(accountNoDecrypt);
+            string accountNoData = ASCIIEncoding.ASCII.GetString(accountNoDecryptArr);
+
+            string combinedData = $"Name: {nameData}\nSurname: {surnameData}\nMail: {mailData}\nPassword: {passwordData}\nAccount No: {accountNoData}";
             richTextBox1.Text = combinedData;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CurrentRow.Selected= true;
+
         }
     }
 }
