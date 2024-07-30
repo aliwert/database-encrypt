@@ -96,7 +96,11 @@ namespace encrypt_database
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.CurrentRow.Selected= true;
-
+            txtName.Text=dataGridView1.Rows[e.RowIndex].Cells["Name"].Value.ToString();
+            txtSurname.Text = dataGridView1.Rows[e.RowIndex].Cells["Surname"].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[e.RowIndex].Cells["Mail"].Value.ToString();
+            txtPassword.Text = dataGridView1.Rows[e.RowIndex].Cells["Password"].Value.ToString();
+            txtAccNo.Text = dataGridView1.Rows[e.RowIndex].Cells["AccountNo"].Value.ToString();
         }
     }
 }
