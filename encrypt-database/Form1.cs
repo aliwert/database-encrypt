@@ -24,7 +24,21 @@ namespace encrypt_database
             string name = txtName.Text;
             byte[] nameArr = ASCIIEncoding.ASCII.GetBytes(name);
             string encryptName = Convert.ToBase64String(nameArr);
-            label6.Text = encryptName;
+
+
+            string surname = txtSurname.Text;
+            byte[] surnameArr = ASCIIEncoding.ASCII.GetBytes(surname);
+            string encryptSurname = Convert.ToBase64String(surnameArr);
+
+            string mail = txtSurname.Text;
+            byte[] mailArr = ASCIIEncoding.ASCII.GetBytes(mail);
+            string encryptMail = Convert.ToBase64String(mailArr);
+
+            string password = txtSurname.Text;
+            byte[] passwordArr = ASCIIEncoding.ASCII.GetBytes(password);
+            string encryptPassword = Convert.ToBase64String(passwordArr);
+
+
         }
     }
 }
