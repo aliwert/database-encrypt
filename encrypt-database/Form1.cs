@@ -16,5 +16,13 @@ namespace encrypt_database
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string text = txtName.Text;
+            byte[] dataArr = ASCIIEncoding.ASCII.GetBytes(text);
+            string encryptData= Convert.ToBase64String(dataArr);
+            label6.Text=encryptData;
+        }
     }
 }
