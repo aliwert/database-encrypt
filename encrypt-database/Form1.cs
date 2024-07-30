@@ -19,6 +19,13 @@ namespace encrypt_database
             InitializeComponent();
         }
         SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-LRMEISB\SQLEXPRESS; Initial Catalog=Encrypt; Integrated Security=True");
+        void list()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select * From TBLDATA", connect);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;
@@ -52,6 +59,11 @@ namespace encrypt_database
             command.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Datas added");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            list();
         }
     }
 }
