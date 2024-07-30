@@ -41,6 +41,17 @@ namespace encrypt_database
             string accountNo = txtAccNo.Text;
             byte[] accountNoArr = ASCIIEncoding.ASCII.GetBytes(accountNo);
             string encryptAccountNo = Convert.ToBase64String(accountNoArr);
+
+            connect.Open();
+            SqlCommand command = new SqlCommand("insert into TBLDATA (NAME,SURNAME,MAIL,PASSWORD,ACCOUNTNO) values (@p1, @p2,@p3,@p4,@p5)", connect);
+            command.Parameters.AddWithValue("@p1", encryptName);
+            command.Parameters.AddWithValue("@p2", encryptSurname);
+            command.Parameters.AddWithValue("@p3", encryptMail);
+            command.Parameters.AddWithValue("@p4", encryptPassword);
+            command.Parameters.AddWithValue("@p5", encryptAccountNo);
+            command.ExecuteNonQuery();
+            connect.Close();
+            MessageBox.Show("Datas added");
         }
     }
 }
